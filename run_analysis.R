@@ -1,5 +1,5 @@
 
-filename <- "Coursera_DS3_Final.zip"
+filename <- "getdata_projectfiles_UCI HAR Dataset"
 
 # Checking if archieve already exists.
 if (!file.exists(filename)){
