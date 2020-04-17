@@ -1,7 +1,6 @@
 
 filename <- "getdata_projectfiles_UCI HAR Dataset"
 
-# Checking if archieve already exists.
 if (!file.exists(filename)){
   fileURL <- "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
   download.file(fileURL, filename)
@@ -21,7 +20,7 @@ Test_Y<- read.table("UCI HAR Dataset/test/y_test.txt", col.names = "val")
 Train_Y <- read.table("UCI HAR Dataset/train/y_train.txt", col.names = "val")
 Train_X <- read.table("UCI HAR Dataset/train/X_train.txt", col.names = features$func)
 
-
+# Merging the test and train sets and finding the mean and std
 
 XFin <- rbind(Train_X, Test_X)
 YFin <- rbind(Train_Y , Test_Y)
